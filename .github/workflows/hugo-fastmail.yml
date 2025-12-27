@@ -1,0 +1,90 @@
+name: Build and Deploy to Fastmail
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.134.0'
+          extended: true
+
+      - name: Build
+        run: hugo --logLevel debug --destination public
+
+      - name: List directory contents
+        run: ls -la public
+
+      - name: Persist build
+        uses: actions/upload-artifact@v4
+        with:
+          name: website
+          path: public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download build
+        uses: actions/download-artifact@v4
+        with:
+          path: website
+          name: website
+
+      - name: Install rclone
+        run: |
+          curl https://rclone.org/install.sh | sudo bash
+
+      - name: Backup remote directory
+        run: |
+          echo "[webdav]
+          type = webdav
+          url = ${{ secrets.WEBDAV_URL }}
+          vendor = other
+          user = ${{ secrets.WEBDAV_USERNAME }}
+          pass = ${{ secrets.WEBDAV_PASSWORD }}" > rclone.conf
+          mkdir backup
+          rclone --config rclone.conf sync webdav:${{ secrets.WEBDAV_PATH }} backup
+
+      - name: Persist backup
+        uses: actions/upload-artifact@v4
+        with:
+          name: backup
+          path: backup
+
+      - name: Clear remote directory but do not delete the root folder
+        run: |
+          rclone --config rclone.conf delete webdav:${{ secrets.WEBDAV_PATH }}
+          rclone --config rclone.conf rmdirs --leave-root webdav:${{ secrets.WEBDAV_PATH }}
+
+      - name: Deploy to WebDAV with rclone
+        run: |
+          rclone --config rclone.conf copy ./website webdav:${{ secrets.WEBDAV_PATH }} || exit 1
+
+      - name: Failover
+        run: |
+          if [ $? -eq 1 ]; then
+            echo "rclone failed. Restoring original website files."
+            rclone --config rclone.conf copy backup webdav:${{ secrets.WEBDAV_PATH }}
+          fi
+
+      - name: Cleanup
+        run: rm rclone.conf
