@@ -2,6 +2,7 @@
 date = '2025-03-06T12:00:00-08:00'
 draft = true
 title = 'Where I Get News From Lately'
+tags = ['news', 'journalism', 'news sources']
 +++
 
 Key places I’m getting news from lately.  Mostly for staying informed about
