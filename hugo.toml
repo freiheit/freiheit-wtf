@@ -1,0 +1,4 @@
+baseURL = 'https://test.freiheit.wtf/'
+languageCode = 'en-us'
+title = 'freiheit.wtf'
+theme = 'terminal'
