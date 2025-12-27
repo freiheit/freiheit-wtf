@@ -4,6 +4,22 @@ title = 'freiheit.wtf'
 theme = 'terminal'
 pagination.pagerSize = 5
 
+sectionPagesMenu = 'main'
+
+[menus]
+  [[menus.main]]
+    name = 'Home'
+    pageRef = '/'
+    weight = 10
+#  [[menus.main]]
+#    name = 'About'
+#    pageRef = '/about'
+#    weight = 20
+
+[permalinks]
+  [permalinks.page]
+    posts = '/:year/:month/:slug/'
+
 [markup.highlight]
   noClasses = false
 
