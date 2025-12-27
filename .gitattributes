@@ -1,0 +1,2 @@
+static/og-image.png filter=lfs diff=lfs merge=lfs -text
+static/favicon.ico filter=lfs diff=lfs merge=lfs -text
