@@ -58,7 +58,7 @@ jobs:
           echo "[webdav]
           type = webdav
           url = ${{ secrets.WEBDAV_URL }}
-          vendor = other
+          vendor = fastmail
           user = ${{ secrets.WEBDAV_USERNAME }}
           pass = ${{ secrets.WEBDAV_PASSWORD }}" > rclone.conf
           mkdir backup
