@@ -1,2 +1,7 @@
 static/og-image.png filter=lfs diff=lfs merge=lfs -text
 static/favicon.ico filter=lfs diff=lfs merge=lfs -text
+*.jpg filter=lfs diff=lfs merge=lfs -text
+*.png filter=lfs diff=lfs merge=lfs -text
+content/posts/caturday-every-day/leia-2.jpg filter=lfs diff=lfs merge=lfs -text
+content/posts/caturday-every-day/leia-3.jpg filter=lfs diff=lfs merge=lfs -text
+content/posts/caturday-every-day/leia-1.jpg filter=lfs diff=lfs merge=lfs -text
