@@ -2,6 +2,7 @@
 date = '2023-01-01T17:50:31-08:00'
 draft = false
 title = 'About'
+menus = 'main'
 +++
 
 Just this guy, you know?
