@@ -1,4 +1,4 @@
-baseURL = 'https://test.freiheit.wtf/'
+baseURL = 'https://freiheit.wtf/'
 languageCode = 'en-us'
 title = 'freiheit.wtf'
 theme = 'terminal'
