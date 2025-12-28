@@ -28,7 +28,7 @@ So, what did I actually do?
 
 1. Skimmed Hugo docs to figure out if it would meet my needs (yes)
 2. Skimmed around some of the different hosting options, and determined that
-   I had at least a few free or very cheap options.
+   I had at least a few free or cheap options.
 3. Looked at options for migrating my current content over, and found a few
    different options for converting from Wordpress to Hugo.
 4. Installed Hugo locally (`dnf install hugo` in a distrobox on my bazzite
