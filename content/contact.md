@@ -7,6 +7,9 @@ weight = 20
 tags = ['freiheit']
 keywords = ['freiheit', 'contact', 'email', 'signal', 'links', 'code']
 description = "How to contact me various ways and where to find me elsewhere online."
+author = 'freiheit'
+readingTime = false
+hideComments = true
 +++
 
 ## Contact Me

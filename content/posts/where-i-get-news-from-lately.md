@@ -6,6 +6,7 @@ tags = ['news', 'journalism', 'news sources']
 keywords = ['news', 'journalism', 'news sources']
 description = "A list of news sources I like, as of early 2025."
 Toc = true
+author = 'freiheit'
 +++
 
 Key places I’m getting news from lately. Mostly for staying informed about

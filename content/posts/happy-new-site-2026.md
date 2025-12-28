@@ -7,6 +7,7 @@ tags = ['hugo', 'website', 'wordpress', 'tech']
 keywords = 'hugo, website, wordpress, tech, fastmail, freiheit.wtf'
 description = "A writeup about switching freiheit.wtf from Wordpress to Hugo."
 Toc = true
+author = 'freiheit'
 +++
 
 ## Preamble

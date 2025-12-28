@@ -7,6 +7,9 @@ weight = 30
 tags = ['freiheit']
 keywords = ['freiheit', 'about', 'biographical']
 description = "Some basic biographical info about Freiheit."
+author = 'freiheit'
+readingTime = false
+hideComments = true
 +++
 
 Just this guy, you know?

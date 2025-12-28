@@ -5,6 +5,8 @@ title = 'Caturday Every Day'
 tags = ['photos', 'cats', 'leia']
 keywords = 'cats, leia, pictures'
 description = "Some pictures of a cat."
+author = 'freiheit'
+readingTime = false
 +++
 
 ## Leia is keeping me from getting anything done this evening
