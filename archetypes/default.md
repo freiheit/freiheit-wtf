@@ -1,5 +1,6 @@
 +++
 title = '{{ replace .File.ContentBaseName "-" " " | title }}'
+menus = 'main'
 tags = ["", ""]
 keywords = ["", ""]
 date = '{{ .Date }}'
