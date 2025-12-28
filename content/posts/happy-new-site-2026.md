@@ -20,7 +20,7 @@ wasn't doing much with it.
 
 Turns out that the email service I've been using for all my personal email
 (such as for `*@freiheit.wtf`) includes a "Files" service that supports
-WebDAV and includes free website hosting services.  Since I expect my
+WebDAV and includes free website hosting services. Since I expect my
 personal website to be pretty low-traffic I could likely use GitHub Pages,
 AWS, CloudFlare or others and fit within the free tiers.
 
@@ -34,12 +34,12 @@ So, what did I actually do?
 4. Installed Hugo locally (`dnf install hugo` in a distrobox on my bazzite
    desktop)
 5. Followed https://gohugo.io/getting-started/quick-start/
-   * But browsed available [Hugo Themes](https://themes.gohugo.io/) and went
+   - But browsed available [Hugo Themes](https://themes.gohugo.io/) and went
      with [Terminal](https://themes.gohugo.io/themes/hugo-theme-terminal/)
      instead of the theme there.
-6. Since my site really only had a couple "blog" posts and a couple pages, I 
+6. Since my site really only had a couple "blog" posts and a couple pages, I
    basically just used copy-paste to recreate everything.
-   * And tweaked some of the URL settings so that key things stayed with
+   - And tweaked some of the URL settings so that key things stayed with
      same paths.
 7. Kept doing `hugo build` and `hugo server -D` and browsing what I was
    making until I was happy with it.
@@ -51,8 +51,8 @@ So, what did I actually do?
       `hugo-version: '0.152.2'` to work properly for me.
    3. Struggled a little with the rclone steps and did some of that manually
       locally instead.
-      * WEBDAV_PASSWORD needed to be base64 encoded
-      * Changed from `vendor = other` to `vendor = fastmail`
+      - WEBDAV_PASSWORD needed to be base64 encoded
+      - Changed from `vendor = other` to `vendor = fastmail`
    4. I also added `workflow_dispatch:` and a daily schedule to the workflow file,
       so that I can manually run it and so that I can schedule posts for the
       future and have that automatically happen.
@@ -67,4 +67,3 @@ And the code for _this post_ is here: https://raw.githubusercontent.com/freiheit
 
 Note: I wrote this a few days early and scheduled it for posting on Jan 1
 via that `publishDate = '2026-01-01T01:00:00-08:00'` earlier.
-

@@ -9,22 +9,22 @@ summary = "Some basic biographical info about Freiheit."
 
 Just this guy, you know?
 
-## Who am I? ##
+## Who am I?
 
-* [Contact info and links at /contact](/contact)
-* Name: Eric
-* Location:
-  * Spawn Point: [Sonoma county, California, US](https://en.wikipedia.org/wiki/Sonoma_County%2C_California)
-  * Current Location: [Santa Rosa, California, US](https://en.wikipedia.org/wiki/Santa_Rosa,_California)
-  * About 50 miles north of San Francisco
-* Work: Linux, Systems Engineer, SRE, DevOps, IaC, SysAdmin, Programming, etc
-  * Currently working at [Sonic](https://sonic.com)
-  * Previously worked at: [SSU](https://www.sonoma.edu), [SRJC](https://www.santarosa.edu), a couple different startups
-* Politics / Stances:
-  * Left / Liberal
-  * LGBTQIA+ Ally
-  * Anti-racist
-  * Anti-fascist
+- [Contact info and links at /contact](/contact)
+- Name: Eric
+- Location:
+  - Spawn Point: [Sonoma county, California, US](https://en.wikipedia.org/wiki/Sonoma_County%2C_California)
+  - Current Location: [Santa Rosa, California, US](https://en.wikipedia.org/wiki/Santa_Rosa,_California)
+  - About 50 miles north of San Francisco
+- Work: Linux, Systems Engineer, SRE, DevOps, IaC, SysAdmin, Programming, etc
+  - Currently working at [Sonic](https://sonic.com)
+  - Previously worked at: [SSU](https://www.sonoma.edu), [SRJC](https://www.santarosa.edu), a couple different startups
+- Politics / Stances:
+  - Left / Liberal
+  - LGBTQIA+ Ally
+  - Anti-racist
+  - Anti-fascist
 
 For a living, I refine laziness to new levels.
 I won't be happy until there's robots that take care of everything but the
