@@ -1,10 +1,10 @@
 +++
-date = '2025-02-18T22:21:31-08:00'
+publishDate = '2025-02-18T22:21:31-08:00'
 draft = false
 title = 'Caturday Every Day'
 tags = ['photos', 'cats', 'leia']
 keywords = 'cats, leia, pictures'
-summary = "Some pictures of a cat."
+description = "Some pictures of a cat."
 +++
 
 ## Leia is keeping me from getting anything done this evening

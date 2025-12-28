@@ -4,7 +4,7 @@ draft = false
 title = 'Where I Get News From Lately'
 tags = ['news', 'journalism', 'news sources']
 keywords = ['news', 'journalism', 'news sources']
-summary = "A list of news sources I like, as of early 2025."
+description = "A list of news sources I like, as of early 2025."
 Toc = true
 +++
 

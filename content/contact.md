@@ -1,17 +1,19 @@
 +++
 date = '2025-02-02T17:50:31-08:00'
+lastmod = '2025-12-27T19:45:00-08:00'
 draft = false
 title = 'Contact & Links'
 menus = 'main'
 weight = 20
 tags = ['freiheit']
 keywords = ['freiheit', 'contact', 'email', 'signal', 'links', 'code']
-summary = "How to contact me various ways and where to find me elsewhere online."
+description = "How to contact me various ways and where to find me elsewhere online."
 +++
 
 ## Contact Me
 
 - 📧 Email: <round.park3532@freiheit.wtf>
+  (if I reply, update address book to that address)
 - 💬 Signal:
   [@freiheit.42](https://signal.me/#eu/AiAVfCkEHYmfbpfFeFiWQm1sdn37ldl0ISZ7Q-RN1bHpzkgAjfFH1qJ8YYLCca-l)
   (preferred secure communications)
