@@ -1,8 +1,31 @@
+ci:
+  autoupdate_commit_msg: "Update versions for pre-commit hooks"
+  autofix_commit_msg: "Automated fixes from https://pre-commit.ci"
+  autoupdate_schedule: "weekly"
+
 repos:
-- repo: https://github.com/jermarchand/pre-commit-hugo
-  rev: main
-  hooks:
-   - id: check-front-matter
-     name: Check Hugo Front Matter
-     args:
-       - --minimum_tags=1
+  - repo: https://github.com/jermarchand/pre-commit-hugo
+    rev: main
+    hooks:
+      - id: check-front-matter
+        name: Check Hugo Front Matter
+        args:
+          - --minimum_tags=1
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: "v6.0.0"
+    hooks:
+      - id: check-added-large-files
+      - id: check-case-conflict
+      - id: check-merge-conflict
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: mixed-line-ending
+      - id: trailing-whitespace
+
+  - repo: https://github.com/rbubley/mirrors-prettier
+    rev: "v3.7.4"
+    hooks:
+      - id: prettier
+        files: \.(md|toml|yml|yaml)
+        args: [--prose-wrap=preserve]
