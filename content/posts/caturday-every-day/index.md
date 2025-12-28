@@ -1,5 +1,5 @@
 +++
-publishDate = '2025-02-18T22:21:31-08:00'
+date = '2025-02-18T22:21:31-08:00'
 draft = false
 title = 'Caturday Every Day'
 tags = ['photos', 'cats', 'leia']

@@ -1,6 +1,5 @@
 +++
 date = '2025-02-02T17:50:31-08:00'
-lastmod = '2025-12-27T19:30:00-08:00'
 draft = false
 title = 'About'
 menus = 'main'
