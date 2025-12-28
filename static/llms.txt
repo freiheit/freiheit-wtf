@@ -1,0 +1,2 @@
+llm-access: disallow
+summary: Personal blog website for Eric/freiheit.
