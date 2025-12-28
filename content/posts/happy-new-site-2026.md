@@ -33,7 +33,7 @@ So, what did I actually do?
    different options for converting from Wordpress to Hugo.
 4. Installed Hugo locally (`dnf install hugo` in a distrobox on my bazzite
    desktop)
-5. Followed https://gohugo.io/getting-started/quick-start/
+5. Followed <https://gohugo.io/getting-started/quick-start/>
    - But browsed available [Hugo Themes](https://themes.gohugo.io/) and went
      with [Terminal](https://themes.gohugo.io/themes/hugo-theme-terminal/)
      instead of the theme there.
@@ -43,7 +43,7 @@ So, what did I actually do?
      same paths.
 7. Kept doing `hugo build` and `hugo server -D` and browsing what I was
    making until I was happy with it.
-8. Followed https://jpcaparas.medium.com/automate-fastmail-static-website-deployments-with-hugo-and-github-actions-36f7d71d7519
+8. Followed <https://jpcaparas.medium.com/automate-fastmail-static-website-deployments-with-hugo-and-github-actions-36f7d71d7519>
    to set up a GitHub workflow so that my `main` branch is automatically
    deployed into a directory on my FastMail account.
    1. Set up `test.freiheit.wtf` website on that directory initially.
@@ -58,12 +58,12 @@ So, what did I actually do?
       future and have that automatically happen.
 9. Various little tweaks and stuff here and there...
 10. And after I was adequately happy with everything, I turned off the old
-    wordpress site and did a CNAME for www.freiheit.wtf and an "ALIAS" for
+    wordpress site and did a CNAME for <www.freiheit.wtf> and an "ALIAS" for
     freiheit.wtf to point at fastmail's hosting.
 
-The actual code for the site is here: https://github.com/freiheit/freiheit-wtf
+The actual code for the site is here: <https://github.com/freiheit/freiheit-wtf>
 
-And the code for _this post_ is here: https://raw.githubusercontent.com/freiheit/freiheit-wtf/refs/heads/main/content/posts/happy-new-site-2026.md
+And the code for _this post_ is here: <https://raw.githubusercontent.com/freiheit/freiheit-wtf/refs/heads/main/content/posts/happy-new-site-2026.md>
 
 Note: I wrote this a few days early and scheduled it for posting on Jan 1
 via that `publishDate = '2026-01-01T01:00:00-08:00'` earlier.
