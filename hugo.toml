@@ -48,16 +48,16 @@ timeZone = 'America/Los_Angeles'
   themeColor = "green"
 
   # if you set this to 0, only submenu trigger will be visible
-  showMenuItems = 10
+  showMenuItems = 5
 
   # show selector to switch language
   showLanguageSelector = false
 
   # set theme to full screen width
-  fullWidthTheme = true
+  fullWidthTheme = false
 
   # center theme with default width
-  centerTheme = false
+  centerTheme = true
 
   favicon = "favicon.ico"
 
@@ -86,7 +86,7 @@ timeZone = 'America/Los_Angeles'
   # TocTitle = "Table of Contents" # default
 
   [params.author]
-    name = 'Freiheit'
+    name = 'freiheit'
     email = 'busy.vest9723@freiheit.wtf'
   [params.contact]
     email = 'busy.vest9723@freiheit.wtf'
