@@ -14,12 +14,17 @@ Just this guy, you know?
 - [Contact info and links at /contact](/contact)
 - Name: Eric
 - Location:
-  - Spawn Point: [Sonoma county, California, US](https://en.wikipedia.org/wiki/Sonoma_County%2C_California)
-  - Current Location: [Santa Rosa, California, US](https://en.wikipedia.org/wiki/Santa_Rosa,_California)
+  - Spawn Point:
+    [Sonoma county, California, US](https://en.wikipedia.org/wiki/Sonoma_County%2C_California)
+  - Current Location:
+    [Santa Rosa, California, US](https://en.wikipedia.org/wiki/Santa_Rosa,_California)
   - About 50 miles north of San Francisco
 - Work: Linux, Systems Engineer, SRE, DevOps, IaC, SysAdmin, Programming, etc
-  - Currently working at [Sonic](https://sonic.com)
-  - Previously worked at: [SSU](https://www.sonoma.edu), [SRJC](https://www.santarosa.edu), a couple different startups
+  - Currently working at [Sonic](https://sonic.com).
+  - Previously worked at:
+    [SSU](https://www.sonoma.edu),
+    [SRJC](https://www.santarosa.edu),
+    and a couple different startups.
 - Politics / Stances:
   - Left / Liberal
   - LGBTQIA+ Ally
@@ -35,4 +40,6 @@ until they master robo-diplomacy, join forces into a crazy cybernetic,
 peg-leg, banana-eating, invisible army of laziness-assistance.
 (LLMs are _not_ a step towards this evil plan)
 
-But seriously, I do computer stuff. And I solve problems. Without monkeys (yet).
+But seriously, I do computer stuff.
+And I solve problems.
+Without monkeys (yet).
