@@ -1,0 +1,12 @@
+repos:
+- repo: https://github.com/jermarchand/pre-commit-hugo
+  rev: main
+  hooks:
+   - id: check-front-matter
+     name: Check Hugo Front Matter
+     args:
+       - --base_path=content/
+       - --exclude_file=archetypes/.*
+       - --exclude_file=themes/.*
+       - --ignore_summary_and_description
+       - --minimum_tags=1
