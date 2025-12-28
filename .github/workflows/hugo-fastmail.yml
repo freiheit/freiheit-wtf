@@ -39,7 +39,7 @@ jobs:
         run: ls -la public
 
       - name: Persist build
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: website
           path: public
@@ -74,7 +74,7 @@ jobs:
           rclone --config rclone.conf sync webdav:${{ secrets.WEBDAV_PATH }} backup
 
       - name: Persist backup
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: backup
           path: backup
