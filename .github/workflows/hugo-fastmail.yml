@@ -37,7 +37,7 @@ jobs:
           extended: true
 
       - name: Build
-        run: hugo --logLevel debug --destination public
+        run: hugo --minify --logLevel debug --destination public
 
       - name: List directory contents
         run: ls -la public
