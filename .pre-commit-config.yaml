@@ -10,6 +10,7 @@ repos:
       - id: check-front-matter
         name: Check Hugo Front Matter
         args:
+          - --exclude_file=README.md
           - --minimum_tags=1
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
