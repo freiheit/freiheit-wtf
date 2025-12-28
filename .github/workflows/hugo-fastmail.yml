@@ -59,7 +59,7 @@ jobs:
         run: |
           curl https://rclone.org/install.sh | sudo bash
 
-      - name: Backup remote directory
+      - name: Create rclone.conf
         run: |
           echo "[webdav]
           type = webdav
@@ -67,6 +67,9 @@ jobs:
           vendor = fastmail
           user = ${{ secrets.WEBDAV_USERNAME }}
           pass = ${{ secrets.WEBDAV_PASSWORD }}" > rclone.conf
+
+      - name: Backup remote directory
+        run: |
           mkdir backup
           rclone --config rclone.conf sync webdav:${{ secrets.WEBDAV_PATH }} backup
 
@@ -76,14 +79,14 @@ jobs:
           name: backup
           path: backup
 
-      - name: Clear remote directory but do not delete the root folder
-        run: |
-          rclone --config rclone.conf delete webdav:${{ secrets.WEBDAV_PATH }}
-          rclone --config rclone.conf rmdirs --leave-root webdav:${{ secrets.WEBDAV_PATH }}
+      #- name: Clear remote directory but do not delete the root folder
+      #  run: |
+      #    rclone --config rclone.conf delete webdav:${{ secrets.WEBDAV_PATH }}
+      #    rclone --config rclone.conf rmdirs --leave-root webdav:${{ secrets.WEBDAV_PATH }}
 
       - name: Deploy to WebDAV with rclone
         run: |
-          rclone --config rclone.conf copy ./website webdav:${{ secrets.WEBDAV_PATH }} || exit 1
+          rclone --config rclone.conf sync ./website webdav:${{ secrets.WEBDAV_PATH }} || exit 1
 
       - name: Failover
         run: |
