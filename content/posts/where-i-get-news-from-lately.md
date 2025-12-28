@@ -3,6 +3,7 @@ date = '2025-03-06T12:00:00-08:00'
 draft = false
 title = 'Where I Get News From Lately'
 tags = ['news', 'journalism', 'news sources']
+keywords = ['news', 'journalism', 'news sources']
 summary = "A list of news sources I like, as of early 2025."
 +++
 

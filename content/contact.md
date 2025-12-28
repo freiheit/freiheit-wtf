@@ -3,7 +3,9 @@ date = '2025-02-02T17:50:31-08:00'
 draft = false
 title = 'Contact & Links'
 menus = 'main'
+weight = 20
 tags = ['freiheit']
+keywords = ['freiheit', 'contact', 'email', 'signal', 'links', 'code']
 summary = "How to contact me various ways and where to find me elsewhere online."
 +++
 

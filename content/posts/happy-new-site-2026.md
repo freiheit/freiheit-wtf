@@ -4,6 +4,7 @@ publishDate = '2026-01-01T01:00:00-08:00'
 draft = false
 title = 'Happy New Site 2026'
 tags = ['hugo', 'website', 'wordpress', 'tech']
+keywords = 'hugo, website, wordpress, tech, fastmail, freiheit.wtf'
 summary = "A writeup about switching freiheit.wtf from Wordpress to Hugo."
 +++
 

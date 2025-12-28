@@ -3,7 +3,9 @@ date = '2025-02-02T17:50:31-08:00'
 draft = false
 title = 'About'
 menus = 'main'
+weight = 30
 tags = ['freiheit']
+keywords = ['freiheit', 'about', 'biographical']
 summary = "Some basic biographical info about Freiheit."
 +++
 
