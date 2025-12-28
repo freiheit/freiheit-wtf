@@ -4,6 +4,7 @@ draft = false
 title = 'Contact & Links'
 menus = 'main'
 tags = ['freiheit']
+summary = "How to contact me various ways and where to find me elsewhere online."
 +++
 
 # Contact & Links

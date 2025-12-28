@@ -4,6 +4,7 @@ draft = false
 title = 'About'
 menus = 'main'
 tags = ['freiheit']
+summary = "Some basic biographical info about Freiheit."
 +++
 
 Just this guy, you know?
