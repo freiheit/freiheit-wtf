@@ -1,8 +1,14 @@
 +++
-date = '{{ .Date }}'
-draft = true
 title = '{{ replace .File.ContentBaseName "-" " " | title }}'
+tags = ["", ""]
+keywords = ["", ""]
+date = '{{ .Date }}'
 description = '{{ replace .File.ContentBaseName "-" " " | title }}'
 keywords = ['{{ replace .File.ContentBaseName "-" " " | title }}']
-tags = ['FIXME']
+author = "freiheit"
+cover = ""
+coverCaption = ""
+showFullContent = false
+readingTime = false
+hideComments = true
 +++

@@ -18,6 +18,7 @@ repos:
         name: Check Hugo Front Matter
         args:
           - --exclude_file=README.md
+          - --exclude_file=archetypes/
           - --minimum_tags=1
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
