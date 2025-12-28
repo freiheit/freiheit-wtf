@@ -5,6 +5,7 @@ title = 'Where I Get News From Lately'
 tags = ['news', 'journalism', 'news sources']
 keywords = ['news', 'journalism', 'news sources']
 summary = "A list of news sources I like, as of early 2025."
+Toc = true
 +++
 
 Key places I’m getting news from lately. Mostly for staying informed about

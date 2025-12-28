@@ -6,12 +6,17 @@ title = 'Happy New Site 2026'
 tags = ['hugo', 'website', 'wordpress', 'tech']
 keywords = 'hugo, website, wordpress, tech, fastmail, freiheit.wtf'
 summary = "A writeup about switching freiheit.wtf from Wordpress to Hugo."
+Toc = true
 +++
+
+## Preamble
 
 I had some extra free time during the winter holidays, and was unhappy with
 a few things with my website; so I spent some time totally redoing it.
 
-Caveat for Friends/Family: Hugo is for techy nerd types.
+### Caveat for Friends/Family: Hugo is for techy nerd types
+
+## Background
 
 I went from hosted wordpress (via porkbun option) to
 [Hugo](https://gohugo.io/). Hugo is a framework for generating a static
@@ -19,13 +24,15 @@ website that covered all the stuff I was doing with Wordpress anyway. I was
 paying ~$10/month for wordpress hosting, which felt like a waste when I
 wasn't doing much with it.
 
+### Hosting my site
+
 Turns out that the email service I've been using for all my personal email
 (such as for `*@freiheit.wtf`) includes a "Files" service that supports
 WebDAV and includes free website hosting services. Since I expect my
 personal website to be pretty low-traffic I could likely use GitHub Pages,
 AWS, CloudFlare or others and fit within the free tiers.
 
-So, what did I actually do?
+## So, what did I actually do?
 
 1. Skimmed Hugo docs to figure out if it would meet my needs (yes)
 2. Skimmed around some of the different hosting options, and determined that
@@ -62,9 +69,13 @@ So, what did I actually do?
     wordpress site and did a CNAME for <www.freiheit.wtf> and an "ALIAS" for
     freiheit.wtf to point at fastmail's hosting.
 
+## My Code
+
 The actual code for the site is here: <https://github.com/freiheit/freiheit-wtf>
 
 And the code for _this post_ is here: <https://raw.githubusercontent.com/freiheit/freiheit-wtf/refs/heads/main/content/posts/happy-new-site-2026.md>
+
+## Addendum
 
 Note: I wrote this a few days early and scheduled it for posting on Jan 1
 via that `publishDate = '2026-01-01T01:00:00-08:00'` earlier.
