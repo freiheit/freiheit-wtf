@@ -4,6 +4,13 @@ ci:
   autoupdate_schedule: "weekly"
 
 repos:
+  - repo: https://github.com/igorshubovych/markdownlint-cli
+    rev: v0.47.0
+    hooks:
+      - id: markdownlint
+        args:
+          - --fix
+
   - repo: https://github.com/jermarchand/pre-commit-hugo
     rev: main
     hooks:
