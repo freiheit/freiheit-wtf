@@ -11,24 +11,24 @@ summary = "How to contact me various ways and where to find me elsewhere online.
 
 ## Contact Me
 
-- Email: <round.park3532@freiheit.wtf>
-- Signal:
+- 📧 Email: <round.park3532@freiheit.wtf>
+- 💬 Signal:
   [@freiheit.42](https://signal.me/#eu/AiAVfCkEHYmfbpfFeFiWQm1sdn37ldl0ISZ7Q-RN1bHpzkgAjfFH1qJ8YYLCca-l)
   (preferred secure communications)
-- GnuPG/PGP key: (alt/annoying secure communications)
+- 🔏 GnuPG/PGP key: (alt/annoying secure communications)
   - <https://keyoxide.org/52F0BF349B10374A88C3A2AACC80AFD69729BFC7>
   - <https://keybase.io/freiheit>
 
 ## Social Links
 
-- Mastodon/Fediverse: [@freiheit@hachyderm.io](https://hachyderm.io/@freiheit)
-- Bluesky: [@freiheit.wtf](https://bsky.app/profile/freiheit.wtf)
+- 🐘 Mastodon/Fediverse: [@freiheit@hachyderm.io](https://hachyderm.io/@freiheit)
+- 🦋 Bluesky: [@freiheit.wtf](https://bsky.app/profile/freiheit.wtf)
 - Reddit: <https://www.reddit.com/user/falschfreiheit>
-- Goodreads: <https://www.goodreads.com/user/show/5718859-eric>
-- Last.fm: <https://www.last.fm/user/falschfreiheit>
-- Discord:
-  - [@freiheit1](https://discordapp.com/users/910380721699438592) (me)
-  - [The Abode](https://discord.gg/VK6AT3jF6z) (personal discord)
+- 📚 Goodreads: <https://www.goodreads.com/user/show/5718859-eric>
+- 📻 Last.fm: <https://www.last.fm/user/falschfreiheit>
+- 🎮 Discord:
+  - 🎮 [@freiheit1](https://discordapp.com/users/910380721699438592) (me)
+  - 🎳 [The Abode](https://discord.gg/VK6AT3jF6z) (personal discord)
 
 ## Code Stuff
 
