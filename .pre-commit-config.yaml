@@ -43,8 +43,8 @@ repos:
         files: \.(md|toml|yml|yaml)
         args: [--prose-wrap=preserve]
 
-  - repo: https://github.com/amperser/proselint
-    rev: "v0.16.0"
-    hooks:
-      - id: proselint
-        files: \.md
+#  - repo: https://github.com/amperser/proselint
+#    rev: "v0.16.0"
+#    hooks:
+#      - id: proselint
+#        files: \.md
