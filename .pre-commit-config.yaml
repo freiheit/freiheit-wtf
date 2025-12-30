@@ -12,7 +12,7 @@ repos:
           - --fix
 
   - repo: https://github.com/jermarchand/pre-commit-hugo
-    rev: main
+    rev: v0.1.0
     hooks:
       - id: check-front-matter
         name: Check Hugo Front Matter
