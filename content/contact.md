@@ -14,8 +14,8 @@ hideComments = true
 
 ## Contact Me
 
-- 📧 Email: <round.park3532@freiheit.wtf>
-  (if I reply, update address book to that address)
+- 📧 Email: round.park3532 [at] freiheit.wtf
+  (random temp email address)
 - 💬 Signal:
   [@freiheit.42](https://signal.me/#eu/AiAVfCkEHYmfbpfFeFiWQm1sdn37ldl0ISZ7Q-RN1bHpzkgAjfFH1qJ8YYLCca-l)
   (preferred secure communications)
