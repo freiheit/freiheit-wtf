@@ -5,7 +5,7 @@ ci:
 
 repos:
   - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.47.0
+    rev: v0.48.0
     hooks:
       - id: markdownlint
         args:
@@ -38,7 +38,7 @@ repos:
       - id: trailing-whitespace
 
   - repo: https://github.com/rbubley/mirrors-prettier
-    rev: "v3.7.4"
+    rev: "v3.8.1"
     hooks:
       - id: prettier
         files: \.(md|toml|yml|yaml)
