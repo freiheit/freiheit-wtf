@@ -12,7 +12,7 @@ pagination.pagerSize = 5
 
 sectionPagesMenu = 'main'
 
-theme = 're-terminal'
+theme = ['hugo-feeds', 're-terminal']
 
 title = 'freiheit.wtf'
 
@@ -37,6 +37,18 @@ timeZone = 'America/Los_Angeles'
 
 [markup.highlight]
   noClasses = false
+
+[module]
+  [[module.imports]]
+    path = "codeberg.org/yelosan/hugo-feeds"
+
+[outputs]
+  # <domain>/feed.xml
+  home = ["HTML", "ATOM", "RSS"]
+  # <domain>/posts/feed.xml
+  section = ["HTML", "ATOM", "RSS"]
+  # <domain>/tags/mytag/feed.xml; <domain>/categories/mycat/feed.xml
+  taxonomy = ["HTML", "ATOM", "RSS"]
 
 [params]
   subtitle = 'Just some guy, you know?'
