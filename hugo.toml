@@ -1,3 +1,6 @@
+[module]
+  [[module.imports]]
+    path = "codeberg.org/yelosan/hugo-feeds"
 
 baseURL = 'https://freiheit.wtf/'
 copyright = '© 2023-2025 Freiheit.wtf'
@@ -38,9 +41,6 @@ timeZone = 'America/Los_Angeles'
 [markup.highlight]
   noClasses = false
 
-[module]
-  [[module.imports]]
-    path = "codeberg.org/yelosan/hugo-feeds"
 
 [outputs]
   # <domain>/feed.xml
