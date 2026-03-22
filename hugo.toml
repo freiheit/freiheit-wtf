@@ -12,7 +12,7 @@ pagination.pagerSize = 5
 
 sectionPagesMenu = 'main'
 
-theme = ['re-terminal']
+theme = ['atom-template-for-hugo', 're-terminal']
 
 title = 'freiheit.wtf'
 
@@ -23,10 +23,6 @@ timeZone = 'America/Los_Angeles'
     name = 'Home'
     pageRef = '/'
     weight = 10
-  [[menus.main]]
-    name = 'RSS Feed'
-    url = '/posts/index.xml'
-    weight = 300
 
 [permalinks]
   [permalinks.page]
@@ -34,6 +30,12 @@ timeZone = 'America/Los_Angeles'
 
 [taxonomies]
   tag = 'tags'
+
+[outputs]
+  home = ['HTML', 'Atom', 'RSS']
+  section = ['HTML',  'Atom', 'RSS']
+  taxonomy = ['HTML',  'Atom', 'RSS']
+  term = ['HTML',  'Atom', 'RSS']
 
 [markup.highlight]
   noClasses = false

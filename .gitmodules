@@ -1,3 +1,6 @@
 [submodule "themes/re-terminal"]
 	path = themes/re-terminal
 	url = https://github.com/mirus-ua/hugo-theme-re-terminal.git
+[submodule "themes/atom-template-for-hugo"]
+	path = themes/atom-template-for-hugo
+	url = https://github.com/araname/atom-template-for-hugo.git
