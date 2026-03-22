@@ -9,6 +9,7 @@ author = "freiheit"
 showFullContent = true
 readingTime = false
 hideComments = true
+hidden = true
 +++
 
 ## Available Feeds
