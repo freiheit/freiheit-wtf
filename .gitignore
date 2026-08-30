@@ -73,3 +73,7 @@ bower_components
 # AWS stuff for publishing static files
 .aws-credentials.json
 .awspublish*
+
+# Hugo stuff
+resources/_gen
+resources/_gen/*
