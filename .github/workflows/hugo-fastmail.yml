@@ -3,14 +3,14 @@ name: Build and Deploy to Fastmail
 on:
   push:
     branches:
-      - main
+      - "**"
   schedule:
     - cron: "23 6 * * *"
   workflow_dispatch:
 permissions:
   contents: read
 concurrency:
-  group: "pages"
+  group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
@@ -48,8 +48,52 @@ jobs:
           name: website
           path: public
 
-  deploy:
+  deploy-prep:
     needs: build
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.check.outputs.changed }}
+
+    steps:
+      - name: Download build
+        uses: actions/download-artifact@v8
+        with:
+          path: website
+          name: website
+
+      - name: Install rclone
+        run: |
+          curl https://rclone.org/install.sh | sudo bash
+
+      - name: Create rclone.conf
+        run: |
+          echo "[webdav]
+          type = webdav
+          url = ${{ secrets.WEBDAV_URL }}
+          vendor = fastmail
+          user = ${{ secrets.WEBDAV_USERNAME }}
+          pass = ${{ secrets.WEBDAV_PASSWORD }}" > rclone.conf
+
+      # --download compares actual bytes; webdav size/modtime comparison is
+      # unreliable because every build refreshes mtimes
+      - name: Detect content changes
+        id: check
+        run: |
+          if rclone --config rclone.conf check --download ./website webdav:${{ secrets.WEBDAV_PATH }}; then
+            echo "No content changes since last deploy."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "Content changed."
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Cleanup
+        run: rm rclone.conf
+
+  deploy-fastmail:
+    needs: deploy-prep
+    if: needs.deploy-prep.outputs.changed == 'true'
     runs-on: ubuntu-latest
 
     steps:
@@ -83,39 +127,71 @@ jobs:
           name: backup
           path: backup
 
-      #- name: Clear remote directory but do not delete the root folder
-      #  run: |
-      #    rclone --config rclone.conf delete webdav:${{ secrets.WEBDAV_PATH }}
-      #    rclone --config rclone.conf rmdirs --leave-root webdav:${{ secrets.WEBDAV_PATH }}
-
       - name: Deploy to WebDAV with rclone
         run: |
-          rclone --config rclone.conf sync ./website webdav:${{ secrets.WEBDAV_PATH }} || exit 1
+          rclone --config rclone.conf sync ./website webdav:${{ secrets.WEBDAV_PATH }}
 
       - name: Failover
+        if: failure()
         run: |
-          if [ $? -eq 1 ]; then
-            echo "rclone failed. Restoring original website files."
-            rclone --config rclone.conf copy backup webdav:${{ secrets.WEBDAV_PATH }}
-          fi
+          echo "rclone failed. Restoring original website files."
+          rclone --config rclone.conf copy backup webdav:${{ secrets.WEBDAV_PATH }}
 
       - name: Cleanup
-        run: rm rclone.conf
+        if: always()
+        run: rm -f rclone.conf
+
+  deploy-gh-pages:
+    needs: deploy-prep
+    if: needs.deploy-prep.outputs.changed == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Download build
+        uses: actions/download-artifact@v8
+        with:
+          path: website
+          name: website
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: website
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
 
   fastlycache:
-    needs: deploy
+    needs: [deploy-fastmail, deploy-gh-pages]
+    # run if EITHER deploy target succeeded; one broken target must not
+    # block purging the other's fresh content
+    if: ${{ !cancelled() && (needs.deploy-fastmail.result == 'success' || needs.deploy-gh-pages.result == 'success') }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7
-
-      - name: Set up Fastly CLI
-        uses: fastly/compute-actions/setup@v14
-        with:
-          # cli_version: '14.3.1' # optional, defaults to 'latest'
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Clear Fastly Cache
+      - name: Soft purge Fastly cache
         env:
           FASTLY_API_TOKEN: ${{ secrets.FASTLY_API_TOKEN }}
         run: |
-          fastly service purge --service-id ${{ secrets.FASTLY_SERVICE_ID }} --all
+          curl -sf -X POST \
+            -H "Fastly-Key: $FASTLY_API_TOKEN" \
+            -H "Fastly-Soft-Purge: 1" \
+            "https://api.fastly.com/service/${{ secrets.FASTLY_SERVICE_ID }}/purge/everything"
+
+      - name: Re-warm cache
+        run: |
+          for url in https://freiheit.wtf/ https://freiheit.wtf/styles.css https://freiheit.wtf/bundle.min.js; do
+            curl -s -o /dev/null -w "%{http_code} $url\n" "$url"
+          done
